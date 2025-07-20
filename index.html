@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulotlar Ro'yxati</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="notification-container"></div>
+
+    <div class="container">
+        <div class="header">
+             <h1>Mahsulotlarimiz</h1>
+             <a href="login.html" class="admin-link">Admin Panel</a>
+        </div>
+
+        <!-- Mahsulotlar ro'yxati -->
+        <h2>Mavjud Mahsulotlar</h2>
+        <input type="text" id="search-input" placeholder="Mahsulot nomini qidiring...">
+
+        <div class="sort-buttons">
+            <span>Saralash:</span>
+            <button id="sort-by-name" class="sort-btn">Nomi bo'yicha</button>
+            <button id="sort-by-price" class="sort-btn">Narxi bo'yicha</button>
+        </div>
+
+        <table id="products-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nomi</th>
+                    <th>Narxi</th>
+
+                </tr>
+            </thead>
+            <tbody id="products-list">
+                <!-- Mahsulotlar shu yerda paydo bo'ladi -->
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

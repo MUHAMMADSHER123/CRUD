@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Mahsulotlar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="notification-container"></div>
+    <div class="container">
+        <div class="header">
+            <h1>Mahsulotlarni Boshqarish (Admin)</h1>
+            <button id="logout-btn">Chiqish</button>
+        </div>
+
+        <!-- Mahsulot qo'shish formasi -->
+        <form id="add-product-form">
+            <h2>Yangi Mahsulot Qo'shish</h2>
+            <input type="text" id="product-name" placeholder="Nomi" required>
+            <input type="number" id="product-price" placeholder="Narxi" required>
+            <button type="submit">Qo'shish</button>
+        </form>
+
+        <hr>
+
+        <!-- Mahsulotlar ro'yxati -->
+        <h2>Mavjud Mahsulotlar</h2>
+        <input type="text" id="search-input" placeholder="Mahsulot nomini qidiring...">
+
+        <div class="sort-buttons">
+            <span>Saralash:</span>
+            <button id="sort-by-name" class="sort-btn">Nomi bo'yicha</button>
+            <button id="sort-by-price" class="sort-btn">Narxi bo'yicha</button>
+        </div>
+
+        <table id="products-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nomi</th>
+                    <th>Narxi</th>
+                    <th>Harakatlar</th>
+                </tr>
+            </thead>
+            <tbody id="products-list">
+                <!-- Mahsulotlar shu yerda paydo bo'ladi -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tahrirlash uchun Modal Oyna -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Mahsulotni Tahrirlash</h2>
+            <form id="edit-product-form">
+                <input type="hidden" id="edit-product-id">
+                <input type="text" id="edit-product-name" placeholder="Nomi" required>
+                <input type="number" id="edit-product-price" placeholder="Narxi" required>
+                <button type="submit">Saqlash</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
